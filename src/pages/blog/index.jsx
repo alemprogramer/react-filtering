@@ -11,8 +11,11 @@ function Blog() {
         avatar: `${link}/vendor/images/blogger.png`,
         name: `Jhon Doe13579`
     };
+
+    const [post, setPost] = useState([...Data]);
+
     const [blog,
-        blogPagi] = useState([]);
+        setBlog] = useState([]);
     const [loading,
         blogLoading] = useState(false);
     const [page,
@@ -24,9 +27,11 @@ function Blog() {
         
     useEffect(() => {
         blogLoading(true);
-        blogPagi(Data);
+        setBlog(Data);
         blogLoading(false);
     }, []);
+
+    console.log(post);
 
     const filt=(tags)=>{
         Data.forEach((e) => {
