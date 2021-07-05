@@ -3,7 +3,7 @@ const data = [
     {
         id: 1,
         img: `${link}/vendor/images/partner.jpg`,
-        title: `Meet our People - Marketing Team Leader Paul Wazouski`,
+        title: `'Tech', 'Design', 'Virtual Staging', '3D Modelling`,
         category: [
             'Tech', 'Design', 'Virtual Staging', '3D Modelling'
         ],
@@ -15,7 +15,7 @@ const data = [
     }, {
         id: 12,
         img: `${link}/vendor/images/partner.jpg`,
-        title: `Meet our People - Marketing Team Leader Paul Wazouski`,
+        title: `'Design', 'Virtual Staging', '3D Modelling'`,
         category: [
             'Design', 'Virtual Staging', '3D Modelling'
         ],
@@ -27,7 +27,7 @@ const data = [
     }, {
         id: 13,
         img: `${link}/vendor/images/partner.jpg`,
-        title: `Meet our People - Marketing Team Leader Paul Wazouski`,
+        title: `'Design', 'Agent Outreach', '3D Modelling'`,
         category: [
             'Design', 'Agent Outreach', '3D Modelling'
         ],
@@ -39,7 +39,7 @@ const data = [
     }, {
         id: 14,
         img: `${link}/vendor/images/partner.jpg`,
-        title: `Meet our People - Marketing Team Leader Paul Wazouski`,
+        title: `'Design', 'Agent Outreach', 'Virtual Staging', 'Tech'`,
         category: [
             'Design', 'Agent Outreach', 'Virtual Staging', 'Tech'
         ],
@@ -51,7 +51,7 @@ const data = [
     }, {
         id: 15,
         img: `${link}/vendor/images/partner.jpg`,
-        title: `Meet our People - Marketing Team Leader Paul Wazouski`,
+        title: `'Tech', 'Virtual Staging', '3D Modelling'`,
         category: [
             'Tech', 'Virtual Staging', '3D Modelling'
         ],
@@ -111,7 +111,7 @@ const data = [
     }, {
         id: 11,
         img: `${link}/vendor/images/partner.jpg`,
-        title: `Meet our People - Marketing Team Leader Paul Wazouski`,
+        title: `'Design', 'Agent Outreach', 'Virtual Staging', '3D Modelling'`,
         category: [
             'Design', 'Agent Outreach', 'Virtual Staging', '3D Modelling'
         ],
