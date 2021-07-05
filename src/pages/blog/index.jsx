@@ -5,14 +5,13 @@ import Pagination from './pagination';
 import Data, {category} from "./data";
 
 function Blog() {
-    /* let k = 0; */
     const link = process.env.PUBLIC_URL;
     const person = {
         avatar: `${link}/vendor/images/blogger.png`,
         name: `Jhon Doe13579`
     };
-    
-    const [filtered,setFiltered]=useState([...Data]);
+
+    const allBlog = [...Data];
     const [blog,
         setBlog] = useState([]);
     const [loading,
@@ -23,33 +22,35 @@ function Blog() {
         limitChange] = useState(15);
     const [loader,
         setLoader] = useState(false);
-        
+
     useEffect(() => {
         blogLoading(true);
-        setBlog(filtered);
+        setBlog(Data);
         blogLoading(false);
     }, []);
 
-    const filt=(tags)=>{
-        let rslt=[]
+    const lastBlogIndex = page * blogLimit;
+    const firstBlogIndex = lastBlogIndex - blogLimit;
+    const currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
+
+    const filtering = (tags) => {
+        let rslt = []
         setLoader(true)
         Data.forEach((e) => {
-            let value = e.category.find((d) => {
-                return d === tags;
-            })
+            let value = e
+                .category
+                .find((d) => {
+                    return d === tags;
+                })
             if (value) {
                 return rslt.push(e);
             }
         })
         setTimeout(() => {
             setLoader(false)
-        }, 1000); 
-        return setFiltered(rslt)
+        }, 1000);
+        return setBlog(rslt)
     };
-    const lastBlogIndex = page * blogLimit;
-    const firstBlogIndex = lastBlogIndex - blogLimit;
-    const currentBlogs = filtered.slice(firstBlogIndex, lastBlogIndex);
-
     const pageGo = (n) => {
         setLoader(true)
         setTimeout(() => {
@@ -58,7 +59,6 @@ function Blog() {
             window.scrollTo({top: 650, left: 0});
         }, 1000);
     };
-
 
     return (
         <section className="blog">
@@ -84,12 +84,28 @@ function Blog() {
                                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul className="navbar-nav filter_options ml-auto mr-auto">
                                             <li className='nav-item'>
-                                                <button type='button' onClick={() => setFiltered(Data)} className="nav-link">All</button>
+                                                <button
+                                                    type='button'
+                                                    onClick={() => {
+                                                        if (allBlog.length !== blog.length) {
+                                                        setLoader(true);
+                                                        setTimeout(() => {
+                                                            setBlog(allBlog);
+                                                            setLoader(false);
+                                                            window.scrollTo({top: 650, left: 0});
+                                                        }, 1000);
+                                                    };
+                                                }}
+                                                    className="nav-link">All</button>
                                             </li>
                                             {category.map(c => <li key={c.id} className='nav-item'>
-                                                <button type='button' onClick={() => { filt(c.value)}} className="nav-link">{c.value}</button>
+                                                <button
+                                                    type='button'
+                                                    onClick={() => {
+                                                    filtering(c.value)
+                                                }}
+                                                    className="nav-link">{c.value}</button>
                                             </li>)}
-                                            {console.log(filtered)}
                                         </ul>
                                         <div className="form-inline my-2 my-lg-0">
                                             <div className="form_sector options">
@@ -98,10 +114,10 @@ function Blog() {
                                                         Per Page
                                                     </h6>
                                                 </div>
-                                                <select className="styled">
-                                                    <option onClick={() => limitChange(5)} value='5'>5</option>
+                                                <select className="styled" defaultValue={blogLimit}>
+                                                    <option onClick={() => limitChange(5)} defaultValue='5'>5</option>
                                                     <option onClick={() => limitChange(15)} defaultValue='15'>15</option>
-                                                    <option onClick={() => limitChange(25)} value='25'>25</option>
+                                                    <option onClick={() => limitChange(25)} defaultValue='25'>25</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -144,8 +160,6 @@ function Blog() {
                                             title={currentBlogs[b].title}
                                             img={currentBlogs[b].img}
                                             loading={loading}/>)}
-
-                                    {/* <Blogger post={currentBlogs} load={loading}/> */}
                                 </div>
                             : <h2>Loading....</h2>}
 
