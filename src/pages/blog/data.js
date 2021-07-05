@@ -87,9 +87,9 @@ const Data = [
     }, {
         id: 18,
         category: [
-            'Design', 'Agent Outreach', 'Virtual Staging', 'Tech'
+            'Design', 'Virtual Staging', 'Tech'
         ],
-        title: `'Design', 'Agent Outreach', 'Virtual Staging', 'Tech'`,
+        title: `'Design', 'Virtual Staging', 'Tech'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe12345678`,
@@ -99,9 +99,9 @@ const Data = [
     }, {
         id: 19,
         category: [
-            'Design', 'Agent Outreach', 'Tech', '3D Modelling'
+            'Design', 'Agent Outreach', '3D Modelling'
         ],
-        title: `'Design', 'Agent Outreach', 'Tech', '3D Modelling'`,
+        title: `'Design', 'Agent Outreach', '3D Modelling'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe123456789`,
@@ -111,10 +111,10 @@ const Data = [
     }, {
         id: 11,
         category: [
-            'Design', 'Agent Outreach', 'Virtual Staging', '3D Modelling'
+            'Design','3D Modelling'
         ],
         img: `${link}/vendor/images/partner.jpg`,
-        title: `'Design', 'Agent Outreach', 'Virtual Staging', '3D Modelling'`,
+        title: `'Design','3D Modelling'`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe2`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
@@ -123,9 +123,9 @@ const Data = [
     }, {
         id: 21,
         category: [
-            'Agent Outreach', 'Virtual Staging', '3D Modelling'
+            'Agent Outreach', '3D Modelling'
         ],
-        title: `'Agent Outreach', 'Virtual Staging', '3D Modelling'`,
+        title: `'Agent Outreach', '3D Modelling'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe24`,
@@ -135,9 +135,9 @@ const Data = [
     }, {
         id: 31,
         category: [
-            'Design', 'Virtual Staging', '3D Modelling'
+            'Virtual Staging'
         ],
-        title: `'Design', 'Virtual Staging', '3D Modelling'`,
+        title: `'Virtual Staging'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe246`,
@@ -147,9 +147,9 @@ const Data = [
     }, {
         id: 41,
         category: [
-            'Design', 'Agent Outreach', '3D Modelling'
+            'Agent Outreach'
         ],
-        title: `'Design', 'Agent Outreach', '3D Modelling'`,
+        title: `'Agent Outreach'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe2468`,
@@ -159,9 +159,9 @@ const Data = [
     }, {
         id: 51,
         category: [
-            'Virtual Staging', '3D Modelling'
+            '3D Modelling'
         ],
-        title: `'Virtual Staging', '3D Modelling'`,
+        title: `'3D Modelling'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe1`,
@@ -171,9 +171,9 @@ const Data = [
     }, {
         id: 61,
         category: [
-            'Design', 'Agent Outreach'
+            'Design'
         ],
-        title: `'Design', 'Agent Outreach'`,
+        title: `'Design'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe13`,
@@ -209,9 +209,6 @@ const Data = [
 
 const category = [
     {
-        id: '1',
-        value: `All`
-    }, {
         id: '21',
         value: `Tech`
     }, {

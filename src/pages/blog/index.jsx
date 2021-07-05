@@ -11,9 +11,8 @@ function Blog() {
         avatar: `${link}/vendor/images/blogger.png`,
         name: `Jhon Doe13579`
     };
-
-    const [post, setPost] = useState([...Data]);
-
+    
+    const [filtered,setFiltered]=useState([...Data]);
     const [blog,
         setBlog] = useState([]);
     const [loading,
@@ -27,25 +26,29 @@ function Blog() {
         
     useEffect(() => {
         blogLoading(true);
-        setBlog(Data);
+        setBlog(filtered);
         blogLoading(false);
     }, []);
 
-    console.log(post);
-
     const filt=(tags)=>{
+        let rslt=[]
+        setLoader(true)
         Data.forEach((e) => {
             let value = e.category.find((d) => {
                 return d === tags;
             })
             if (value) {
-                console.log(e);
+                return rslt.push(e);
             }
         })
+        setTimeout(() => {
+            setLoader(false)
+        }, 1000); 
+        return setFiltered(rslt)
     };
-    let lastBlogIndex = page * blogLimit;
-    let firstBlogIndex = lastBlogIndex - blogLimit;
-    let currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
+    const lastBlogIndex = page * blogLimit;
+    const firstBlogIndex = lastBlogIndex - blogLimit;
+    const currentBlogs = filtered.slice(firstBlogIndex, lastBlogIndex);
 
     const pageGo = (n) => {
         setLoader(true)
@@ -80,9 +83,13 @@ function Blog() {
                                     <span className="navbar-brand">Blog Categories</span>
                                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul className="navbar-nav filter_options ml-auto mr-auto">
+                                            <li className='nav-item'>
+                                                <button type='button' onClick={() => setFiltered(Data)} className="nav-link">All</button>
+                                            </li>
                                             {category.map(c => <li key={c.id} className='nav-item'>
-                                                <button type='button' onClick={() => filt(c.value)} className="nav-link">{c.value}</button>
+                                                <button type='button' onClick={() => { filt(c.value)}} className="nav-link">{c.value}</button>
                                             </li>)}
+                                            {console.log(filtered)}
                                         </ul>
                                         <div className="form-inline my-2 my-lg-0">
                                             <div className="form_sector options">
