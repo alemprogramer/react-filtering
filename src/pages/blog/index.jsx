@@ -11,7 +11,6 @@ function Blog() {
         name: `Jhon Doe13579`
     };
 
-    const allBlog = [...Data];
     const [blog,
         setBlog] = useState([]);
     const [loading,
@@ -23,16 +22,16 @@ function Blog() {
     const [loader,
         setLoader] = useState(false);
 
+    // Used For Post Data Rendering
     useEffect(() => {
         blogLoading(true);
         setBlog(Data);
+        setTimeout(() => {
         blogLoading(false);
+        }, 1000);        
     }, []);
 
-    const lastBlogIndex = page * blogLimit;
-    const firstBlogIndex = lastBlogIndex - blogLimit;
-    const currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
-
+    // Filter Method
     const filtering = (tags) => {
         let rslt = []
         setLoader(true)
@@ -48,9 +47,11 @@ function Blog() {
         })
         setTimeout(() => {
             setLoader(false)
+            return setBlog(rslt)
         }, 1000);
-        return setBlog(rslt)
     };
+
+    // Pagination Method
     const pageGo = (n) => {
         setLoader(true)
         setTimeout(() => {
@@ -59,6 +60,18 @@ function Blog() {
             window.scrollTo({top: 650, left: 0});
         }, 1000);
     };
+
+    // View Limit
+    const lastBlogIndex = page * blogLimit;
+    const firstBlogIndex = lastBlogIndex - blogLimit;
+    const currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
+    const limit=(n)=>{
+        setLoader(true)
+        setTimeout(() => {
+            limitChange(n.target.value);
+            setLoader(false)
+        }, 1000);
+    }
 
     return (
         <section className="blog">
@@ -87,10 +100,10 @@ function Blog() {
                                                 <button
                                                     type='button'
                                                     onClick={() => {
-                                                        if (allBlog.length !== blog.length) {
+                                                        if (Data.length !== blog.length) {
                                                         setLoader(true);
                                                         setTimeout(() => {
-                                                            setBlog(allBlog);
+                                                            setBlog(Data);
                                                             setLoader(false);
                                                             window.scrollTo({top: 650, left: 0});
                                                         }, 1000);
@@ -114,10 +127,10 @@ function Blog() {
                                                         Per Page
                                                     </h6>
                                                 </div>
-                                                <select className="styled" defaultValue={blogLimit}>
-                                                    <option onClick={() => limitChange(5)} defaultValue='5'>5</option>
-                                                    <option onClick={() => limitChange(15)} defaultValue='15'>15</option>
-                                                    <option onClick={() => limitChange(25)} defaultValue='25'>25</option>
+                                                <select className="styled" defaultValue={blogLimit} onChange={limit}>
+                                                    <option value='5'>5</option>
+                                                    <option value='15'>15</option>
+                                                    <option value='25'>25</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -128,12 +141,12 @@ function Blog() {
                                                         Sort by
                                                     </h6>
                                                 </div>
-                                                <select className="styled">
+                                                <select className="styled" defaultValue="">
                                                     <option>Select</option>
-                                                    <option value='name'>Name</option>
-                                                    <option value='time'>Time</option>
-                                                    <option value='most-viewed'>Most Viewed</option>
-                                                    <option value='most-commented'>Most Commented</option>
+                                                    <option defaultValue='name'>Name</option>
+                                                    <option defaultValue='time'>Time</option>
+                                                    <option defaultValue='most-viewed'>Most Viewed</option>
+                                                    <option defaultValue='most-commented'>Most Commented</option>
                                                 </select>
                                             </div>
                                         </div>

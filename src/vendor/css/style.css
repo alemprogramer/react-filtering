@@ -4472,7 +4472,7 @@ background: transparent;
 .blog .blog_parts .blog_options .filters .form-inline .form_sector .input,
 .blog .blog_parts .blog_options .navbar .form-inline .form_sector .input {
   float: left;
-  width: 45%;
+  width: 40%;
   margin-top: 7px;
   margin-right: 8px;
 }
@@ -4502,7 +4502,7 @@ background: transparent;
 }
 .blog .blog_parts .blog_options .filters .form-inline .form_sector .styled,
 .blog .blog_parts .blog_options .navbar .form-inline .form_sector .styled {
-  width: 45%;
+  width: 60%;
 }
 .blog .blog_parts .blog_partitions {
   padding-top: 96px;
