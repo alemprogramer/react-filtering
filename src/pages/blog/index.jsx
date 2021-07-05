@@ -28,6 +28,16 @@ function Blog() {
         blogLoading(false);
     }, []);
 
+    const filt=(tags)=>{
+        data.forEach((e) => {
+            let value = e.category.find((data) => {
+                return data === tags;
+            })
+            if (value) {
+                console.log(e);
+            }
+        })
+    };
     let lastBlogIndex = page * blogLimit;
     let firstBlogIndex = lastBlogIndex - blogLimit;
     let currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
@@ -40,6 +50,7 @@ function Blog() {
             window.scrollTo({top: 650, left: 0});
         }, 1000);
     };
+
 
     return (
         <section className="blog">
@@ -65,7 +76,7 @@ function Blog() {
                                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul className="navbar-nav filter_options ml-auto mr-auto">
                                             {category.map(c => <li key={c.id} className='nav-item'>
-                                                <button type='button' className="nav-link">{c.value}</button>
+                                                <button type='button' onClick={() => filt(c.value)} className="nav-link">{c.value}</button>
                                             </li>)}
                                         </ul>
                                         <div className="form-inline my-2 my-lg-0">
@@ -77,7 +88,7 @@ function Blog() {
                                                 </div>
                                                 <select className="styled">
                                                     <option onClick={() => limitChange(5)} value='5'>5</option>
-                                                    <option onClick={() => limitChange(15)} value='15' selected>15</option>
+                                                    <option onClick={() => limitChange(15)} defaultValue='15'>15</option>
                                                     <option onClick={() => limitChange(25)} value='25'>25</option>
                                                 </select>
                                             </div>
