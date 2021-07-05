@@ -1,5 +1,5 @@
 const link = process.env.PUBLIC_URL;
-const data = [
+const Data = [
     {
         id: 1,
         category: [
@@ -65,7 +65,7 @@ const data = [
         category: [
             'Tech', 'Virtual Staging', '3D Modelling'
         ],
-        title: ``,
+        title: `'Tech', 'Virtual Staging', '3D Modelling'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe123456`,
@@ -77,7 +77,7 @@ const data = [
         category: [
             'Design', 'Tech'
         ],
-        title: ``,
+        title: `'Design', 'Tech'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe1234567`,
@@ -89,7 +89,7 @@ const data = [
         category: [
             'Design', 'Agent Outreach', 'Virtual Staging', 'Tech'
         ],
-        title: ``,
+        title: `'Design', 'Agent Outreach', 'Virtual Staging', 'Tech'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe12345678`,
@@ -101,7 +101,7 @@ const data = [
         category: [
             'Design', 'Agent Outreach', 'Tech', '3D Modelling'
         ],
-        title: ``,
+        title: `'Design', 'Agent Outreach', 'Tech', '3D Modelling'`,
         img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe123456789`,
@@ -260,5 +260,5 @@ const short = {
     }
 };
 
-export default data;
+export default Data;
 export {category, short}

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Banner from "../../components/banner/index";
 import Blogger from "./blog";
 import Pagination from './pagination';
-import data, {category} from "./data";
+import Data, {category} from "./data";
 
 function Blog() {
     /* let k = 0; */
@@ -24,14 +24,14 @@ function Blog() {
         
     useEffect(() => {
         blogLoading(true);
-        blogPagi(data);
+        blogPagi(Data);
         blogLoading(false);
     }, []);
 
     const filt=(tags)=>{
-        data.forEach((e) => {
-            let value = e.category.find((data) => {
-                return data === tags;
+        Data.forEach((e) => {
+            let value = e.category.find((d) => {
+                return d === tags;
             })
             if (value) {
                 console.log(e);
