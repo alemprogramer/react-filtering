@@ -75,8 +75,14 @@ function Blog() {
 
     //sorting Blogs
 
-    const sorting = ()=>{
-        
+    const sorting = (n)=>{
+        let v= n.target.value
+        let sorted=[]
+        blog.forEach(e => {
+            (v === 'name' && sorted.push(e.title)) || (v === 'time' && sorted.push(e.date));
+        });
+        let rtn=sorted.sort();
+        console.log(rtn);
     }
 
     return (
