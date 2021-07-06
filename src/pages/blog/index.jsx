@@ -73,6 +73,12 @@ function Blog() {
         }, 1000);
     };
 
+    //sorting Blogs
+
+    const sorting = ()=>{
+        
+    }
+
     return (
         <section className="blog">
 
@@ -141,12 +147,12 @@ function Blog() {
                                                         Sort by
                                                     </h6>
                                                 </div>
-                                                <select className="styled" defaultValue="">
+                                                <select className="styled" onChange={sorting}>
                                                     <option>Select</option>
-                                                    <option defaultValue='name'>Name</option>
-                                                    <option defaultValue='time'>Time</option>
-                                                    <option defaultValue='most-viewed'>Most Viewed</option>
-                                                    <option defaultValue='most-commented'>Most Commented</option>
+                                                    <option value='name'>Name</option>
+                                                    <option value='time'>Time</option>
+                                                    <option value='most-viewed'>Most Viewed</option>
+                                                    <option value='most-commented'>Most Commented</option>
                                                 </select>
                                             </div>
                                         </div>
