@@ -79,7 +79,12 @@ function Blog() {
         let v= n.target.value
         let sorted=[]
         blog.forEach(e => {
-            (v === 'name' && sorted.push(e.title)) || (v === 'time' && sorted.push(e.date));
+            // (v === 'name' && sorted.push(e.title)) || (v === 'time' && sorted.push(e.date));
+            if (v==='name') {
+                sorted.push(e.title)
+            } else if (v === 'time') {
+                sorted.push(e.date)
+            }
         });
         let rtn=sorted.sort();
         console.log(rtn);

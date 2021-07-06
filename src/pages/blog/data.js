@@ -11,7 +11,7 @@ const Data = [
         writer: `Jhon Doe1`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-07-06T09:55:38.254Z`
     },
      {
         id: 12,
@@ -24,7 +24,7 @@ const Data = [
         writer: `Jhon Doe12`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-08-06T09:55:38.254Z`
     }, {
         id: 13,
         tags: [
@@ -36,7 +36,7 @@ const Data = [
         writer: `Jhon Doe123`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-09-06T09:55:38.254Z`
     }, {
         id: 14,
         tags: [
@@ -48,7 +48,7 @@ const Data = [
         writer: `Jhon Doe1234`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-10-06T09:55:38.254Z`
     }, {
         id: 15,
         tags: [
@@ -60,7 +60,7 @@ const Data = [
         writer: `Jhon Doe12345`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-07-16T09:55:38.254Z`
     }, {
         id: 16,
         tags: [
@@ -72,7 +72,7 @@ const Data = [
         writer: `Jhon Doe123456`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-08-16T09:55:38.254Z`
     }, {
         id: 17,
         tags: [
@@ -84,7 +84,7 @@ const Data = [
         writer: `Jhon Doe1234567`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-07-26T09:55:38.254Z`
     }, {
         id: 18,
         tags: [
@@ -96,7 +96,7 @@ const Data = [
         writer: `Jhon Doe12345678`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-08-06T09:55:38.254Z`
     }, {
         id: 19,
         tags: [
@@ -108,7 +108,7 @@ const Data = [
         writer: `Jhon Doe123456789`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-08-26T09:55:38.254Z`
     }, {
         id: 11,
         tags: [
@@ -120,7 +120,7 @@ const Data = [
         writer: `Jhon Doe2`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-07-05T09:55:38.254Z`
     }, {
         id: 21,
         tags: [
@@ -132,7 +132,7 @@ const Data = [
         writer: `Jhon Doe24`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-08-05T09:55:38.254Z`
     }, {
         id: 31,
         tags: [
@@ -144,7 +144,7 @@ const Data = [
         writer: `Jhon Doe246`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-06-06T09:55:38.254Z`
     }, {
         id: 41,
         tags: [
@@ -156,7 +156,7 @@ const Data = [
         writer: `Jhon Doe2468`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-06-16T09:55:38.254Z`
     }, {
         id: 51,
         tags: [
@@ -168,7 +168,7 @@ const Data = [
         writer: `Jhon Doe1`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-09-16T09:55:38.254Z`
     }, {
         id: 61,
         tags: [
@@ -180,7 +180,7 @@ const Data = [
         writer: `Jhon Doe13`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-01-06T09:55:38.254Z`
     }, {
         id: 71,
         tags: [
@@ -192,7 +192,7 @@ const Data = [
         writer: `Jhon Doe135`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2018-01-08T09:55:38.254Z`
     }, {
         id: 81,
         tags: [
@@ -204,7 +204,7 @@ const Data = [
         writer: `Jhon Doe1357`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
-        date: `2021-07-06T09:55:38.254Z`
+        date: `2017-07-09T09:55:38.254Z`
     }
 ];
 
