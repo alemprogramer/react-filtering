@@ -81,13 +81,17 @@ function Blog() {
         blog.forEach(e => {
             // (v === 'name' && sorted.push(e.title)) || (v === 'time' && sorted.push(e.date));
             if (v==='name') {
-                sorted.push(e.title)
+                [e.title].sort()
+                sorted.push(e)
+                // console.log([e.title]);
             } else if (v === 'time') {
-                sorted.push(e.date)
+                [e.date].sort()
+                sorted.push(e)
+                // console.log([e.date]);
             }
         });
-        let rtn=sorted.sort();
-        console.log(rtn);
+        
+        console.log(sorted);
     }
 
     return (

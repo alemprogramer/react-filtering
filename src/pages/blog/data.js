@@ -5,8 +5,8 @@ const Data = [
         tags: [
             'Tech', 'Design', 'Virtual Staging', '3D Modelling'
         ],
-        img: `${link}/vendor/images/partner.jpg`,
         title: `'Tech', 'Design', 'Virtual Staging', '3D Modelling`,
+        img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe1`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
@@ -18,8 +18,8 @@ const Data = [
         tags: [
             'Design', 'Virtual Staging', '3D Modelling'
         ],
-        img: `${link}/vendor/images/partner.jpg`,
         title: `'Design', 'Virtual Staging', '3D Modelling'`,
+        img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe12`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
@@ -30,8 +30,8 @@ const Data = [
         tags: [
             'Design', 'Agent Outreach', '3D Modelling'
         ],
-        img: `${link}/vendor/images/partner.jpg`,
         title: `'Design', 'Agent Outreach', '3D Modelling'`,
+        img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe123`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
@@ -42,8 +42,8 @@ const Data = [
         tags: [
             'Design', 'Agent Outreach', 'Virtual Staging', 'Tech'
         ],
-        img: `${link}/vendor/images/partner.jpg`,
         title: `'Design', 'Agent Outreach', 'Virtual Staging', 'Tech'`,
+        img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe1234`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
@@ -54,8 +54,8 @@ const Data = [
         tags: [
             'Tech', 'Virtual Staging', '3D Modelling'
         ],
-        img: `${link}/vendor/images/partner.jpg`,
         title: `'Tech', 'Virtual Staging', '3D Modelling'`,
+        img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe12345`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
@@ -114,8 +114,8 @@ const Data = [
         tags: [
             'Design','3D Modelling'
         ],
-        img: `${link}/vendor/images/partner.jpg`,
         title: `'Design','3D Modelling'`,
+        img: `${link}/vendor/images/partner.jpg`,
         avatar: `${link}/vendor/images/blogger.png`,
         writer: `Jhon Doe2`,
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
