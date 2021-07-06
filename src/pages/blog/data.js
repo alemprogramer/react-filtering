@@ -2,7 +2,7 @@ const link = process.env.PUBLIC_URL;
 const Data = [
     {
         id: 1,
-        category: [
+        tags: [
             'Tech', 'Design', 'Virtual Staging', '3D Modelling'
         ],
         img: `${link}/vendor/images/partner.jpg`,
@@ -12,9 +12,10 @@ const Data = [
         text: `We specialize in transforming photos of vacant properties into beautiful, virtually staged homes that sells faster and for top dollar.`,
         slug: `${link}`,
         date: `24 September 2019`
-    }, {
+    },
+     {
         id: 12,
-        category: [
+        tags: [
             'Design', 'Virtual Staging', '3D Modelling'
         ],
         img: `${link}/vendor/images/partner.jpg`,
@@ -26,7 +27,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 13,
-        category: [
+        tags: [
             'Design', 'Agent Outreach', '3D Modelling'
         ],
         img: `${link}/vendor/images/partner.jpg`,
@@ -38,7 +39,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 14,
-        category: [
+        tags: [
             'Design', 'Agent Outreach', 'Virtual Staging', 'Tech'
         ],
         img: `${link}/vendor/images/partner.jpg`,
@@ -50,7 +51,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 15,
-        category: [
+        tags: [
             'Tech', 'Virtual Staging', '3D Modelling'
         ],
         img: `${link}/vendor/images/partner.jpg`,
@@ -62,7 +63,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 16,
-        category: [
+        tags: [
             'Tech', 'Virtual Staging', '3D Modelling'
         ],
         title: `'Tech', 'Virtual Staging', '3D Modelling'`,
@@ -74,7 +75,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 17,
-        category: [
+        tags: [
             'Design', 'Tech'
         ],
         title: `'Design', 'Tech'`,
@@ -86,7 +87,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 18,
-        category: [
+        tags: [
             'Design', 'Virtual Staging', 'Tech'
         ],
         title: `'Design', 'Virtual Staging', 'Tech'`,
@@ -98,7 +99,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 19,
-        category: [
+        tags: [
             'Design', 'Agent Outreach', '3D Modelling'
         ],
         title: `'Design', 'Agent Outreach', '3D Modelling'`,
@@ -110,7 +111,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 11,
-        category: [
+        tags: [
             'Design','3D Modelling'
         ],
         img: `${link}/vendor/images/partner.jpg`,
@@ -122,7 +123,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 21,
-        category: [
+        tags: [
             'Agent Outreach', '3D Modelling'
         ],
         title: `'Agent Outreach', '3D Modelling'`,
@@ -134,7 +135,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 31,
-        category: [
+        tags: [
             'Virtual Staging'
         ],
         title: `'Virtual Staging'`,
@@ -146,7 +147,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 41,
-        category: [
+        tags: [
             'Agent Outreach'
         ],
         title: `'Agent Outreach'`,
@@ -158,7 +159,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 51,
-        category: [
+        tags: [
             '3D Modelling'
         ],
         title: `'3D Modelling'`,
@@ -170,7 +171,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 61,
-        category: [
+        tags: [
             'Design'
         ],
         title: `'Design'`,
@@ -182,7 +183,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 71,
-        category: [
+        tags: [
             'Design', 'Tech', 'Virtual Staging', '3D Modelling'
         ],
         title: `'Design', 'Tech', 'Virtual Staging', '3D Modelling'`,
@@ -194,7 +195,7 @@ const Data = [
         date: `24 September 2019`
     }, {
         id: 81,
-        category: [
+        tags: [
             'Tech', 'Agent Outreach', 'Virtual Staging', '3D Modelling'
         ],
         title: `'Tech', 'Agent Outreach', 'Virtual Staging', '3D Modelling'`,
@@ -207,7 +208,7 @@ const Data = [
     }
 ];
 
-const category = [
+const tags = [
     {
         id: '21',
         value: `Tech`
@@ -258,4 +259,4 @@ const short = {
 };
 
 export default Data;
-export {category, short}
+export {tags, short}

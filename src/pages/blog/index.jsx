@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Banner from "../../components/banner/index";
 import Blogger from "./blog";
 import Pagination from './pagination';
-import Data, {category} from "./data";
+import Data, {tags} from "./data";
 
 function Blog() {
     const link = process.env.PUBLIC_URL;
@@ -32,14 +32,14 @@ function Blog() {
     }, []);
 
     // Filter Method
-    const filtering = (tags) => {
+    const filtering = (t) => {
         let rslt = []
         setLoader(true)
         Data.forEach((e) => {
             let value = e
-                .category
+                .tags
                 .find((d) => {
-                    return d === tags;
+                    return d === t;
                 })
             if (value) {
                 return rslt.push(e);
@@ -71,7 +71,7 @@ function Blog() {
             limitChange(n.target.value);
             setLoader(false)
         }, 1000);
-    }
+    };
 
     return (
         <section className="blog">
@@ -111,7 +111,7 @@ function Blog() {
                                                 }}
                                                     className="nav-link">All</button>
                                             </li>
-                                            {category.map(c => <li key={c.id} className='nav-item'>
+                                            {tags.map(c => <li key={c.id} className='nav-item'>
                                                 <button
                                                     type='button'
                                                     onClick={() => {
