@@ -34,7 +34,7 @@ class Blogger extends Component {
                             </div>
                             <h6>{writer}</h6>
                             <p>
-                                {date}
+                                {new Date(date).toLocaleDateString()}
                             </p>
                         </div>
                         <div className="text_part">

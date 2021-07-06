@@ -77,21 +77,29 @@ function Blog() {
 
     const sorting = (n)=>{
         let v= n.target.value
-        let sorted=[]
-        blog.forEach(e => {
-            // (v === 'name' && sorted.push(e.title)) || (v === 'time' && sorted.push(e.date));
-            if (v==='name') {
-                [e.title].sort()
-                sorted.push(e)
-                // console.log([e.title]);
-            } else if (v === 'time') {
-                [e.date].sort()
-                sorted.push(e)
-                // console.log([e.date]);
-            }
-        });
+        let sorted=[];
+        setLoader(true);
+
+        // if (v === 'name') {
+        //     sorted = blog.sort((a, b) => {
+        //         if (a.title < b.title) return -1;
+        //         if (a.title > b.title) return 1;
+        //         return 0;
+        //     });
+        //     } else if (v === 'time') {
+        //     sorted = blog.sort((a, b) => {
+        //         if (a.date < b.date) return -1;
+        //         if (a.date > b.date) return 1;
+        //         return 0;
+        //     });
+        // }
+        v === 'name' && (sorted = blog.sort((a, b) => a.title < b.title ? -1 : 1));
+        v === 'time' && (sorted = blog.sort((a, b) => a.date < b.date ? -1 : 1));
+        setTimeout(() => {
+            setLoader(false);
+        }, 1000);
+        return setBlog(sorted);
         
-        console.log(sorted);
     }
 
     return (
