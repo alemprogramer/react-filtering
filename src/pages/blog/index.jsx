@@ -66,7 +66,7 @@ function Blog() {
     const firstBlogIndex = lastBlogIndex - blogLimit;
     const currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
     const limit=(n)=>{
-        setLoader(true);
+        setLoader(true)
         setTimeout(() => {
             limitChange(n.target.value);
             setLoader(false)
