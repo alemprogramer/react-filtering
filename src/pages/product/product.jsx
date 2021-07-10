@@ -66,8 +66,7 @@ function Product({
                                 </div>
                                 <div className="col-md-6 col-sm-6 col-6">
                                     <div className="price_box tright">
-                                        <h6>{minimum}-{maximum}
-                                            hrs
+                                        <h6>{minimum}-{maximum} hrs
                                         </h6>
                                     </div>
                                 </div>
