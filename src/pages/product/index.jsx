@@ -3,7 +3,7 @@ import {CommonHead} from "../../components/headings/CommonHead";
 import Data, {Custom} from "./data";
 import Product from "./product";
 
-function Index() {
+function Commerce() {
     const [services,
         setServices] = useState([]);
     useEffect(() => {
@@ -33,7 +33,7 @@ function Index() {
                         {services.map(d => <Product
                             key={d.id}
                             title={d.names}
-                            price={d.price}
+                            price={d.imagePrice}
                             currency={d.symbol}
                             revision={d.revision}
                             minimum={d.minTime}
@@ -66,4 +66,4 @@ function Index() {
     )
 }
 
-export default Index
+export default Commerce

@@ -73,7 +73,7 @@ function Product({
                             </div>
                         </div>
                     </div>
-                    <Link to={url} className="btn text-capitalize">Select</Link>
+                    <Link to={`/${url}/step-01`} className="btn text-capitalize">Select</Link>
                 </div>
             </div>
         </div>

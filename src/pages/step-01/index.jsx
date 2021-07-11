@@ -1,6 +1,42 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react';
+import { useParams } from "react-router-dom";
+import { withRouter } from "react-router";
+import Data from "../product/data";
 
 function Step01() {
+
+    const [servicePrice, setServicePrice] = useState(0);
+    const [photoPrice, setPhotoPrice] = useState(0);
+    // eslint-disable-next-line
+    const [photos, setPhotos] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
+    const [PageLoading, isPageLoading] = useState(false);
+    const [summeryLoading, isSummeryLoading] = useState(false)
+    
+    let {slug}=useParams();
+    let product = Data.find(d => d.slug === slug);
+
+    useEffect(() => {
+        isPageLoading(true);
+        setServicePrice(product.serviceCost);
+        setPhotoPrice(product.imagePrice);
+        setTimeout(() => {
+            isPageLoading(false)
+        }, 1000);
+        // eslint-disable-next-line
+    }, []);
+    useEffect(() => {
+        isSummeryLoading(true);
+        // setPhotos();
+        setTotalPrice(Math.abs(servicePrice + (photoPrice * photos) ));
+        setTimeout(() => {
+            console.log(totalPrice);
+            isSummeryLoading(false);
+        }, 1300);
+        
+        // eslint-disable-next-line
+    }, [photos, totalPrice, servicePrice])
+
     return (
         <section className="step-1">
             <section className="p_5_1">
@@ -25,13 +61,13 @@ function Step01() {
                             </div>
                         </div>
                     </div>
+                    {PageLoading===false ? 
                     <div className="documents">
                         <div className="row">
                             <div className="col-md-8 col-sm-12 col-12">
                                {/* There'll be a dropzone */}
                                </div>
-                            {/* change here*/}
-                            <div
+                                {summeryLoading === false ? <div
                                 className="col-md-4 offset-sm-2 offset-md-0 offset-lg-0 offset-0 offset-xl-0 col-sm-8 p00 col-12">
                                 <div className="summery_box">
                                     <div className="row">
@@ -43,10 +79,20 @@ function Step01() {
                                         <div className="col-md-12 col-sm-12 col-12">
                                             <div className="summery_set">
                                                 <div className="name">
+                                                    <h5>Service Cost</h5>
+                                                </div>
+                                                <div className="price">
+                                                    <h5>{servicePrice}</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-12 col-sm-12 col-12">
+                                            <div className="summery_set">
+                                                <div className="name">
                                                     <h5>Photos</h5>
                                                 </div>
                                                 <div className="price">
-                                                    <h5>4</h5>
+                                                    <h5>{photos}</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -56,7 +102,7 @@ function Step01() {
                                                     <h5>Amount</h5>
                                                 </div>
                                                 <div className="price">
-                                                    <h5>₹ 2000.00 x 3</h5>
+                                                        <h5> {photoPrice} x {photos}</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -66,7 +112,7 @@ function Step01() {
                                                     <h5>Total Amount</h5>
                                                 </div>
                                                 <div className="price">
-                                                    <h5>₹ 8000.00</h5>
+                                                        <h5>₹ {totalPrice === isNaN() ? '0' : totalPrice}</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -80,14 +126,16 @@ function Step01() {
                                         Next
                                     </button>
                                 </div>
-                            </div>
+                                </div> : 'Loading....'}
+                            
+
                         </div>
                     </div>
-                </div>
+                : 'loading...' } </div>
             </section>
         </section>
 
     )
 }
 
-export default Step01
+export default withRouter(Step01)
