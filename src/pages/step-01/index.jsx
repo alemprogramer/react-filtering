@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react';
 import { useParams } from "react-router-dom";
 import { withRouter } from "react-router";
 import Data from "../product/data";
+// Dropzone
+import Previews from "../../components/dropzone/index";
 
 function Step01() {
 
@@ -35,7 +37,10 @@ function Step01() {
         }, 1300);
         
         // eslint-disable-next-line
-    }, [photos, totalPrice, servicePrice])
+    }, [photos, totalPrice, servicePrice]);
+
+    // Dropzone
+    
 
     return (
         <section className="step-1">
@@ -65,7 +70,7 @@ function Step01() {
                     <div className="documents">
                         <div className="row">
                             <div className="col-md-8 col-sm-12 col-12">
-                               {/* There'll be a dropzone */}
+                                    <Previews/>
                                </div>
                                 {summeryLoading === false ? <div
                                 className="col-md-4 offset-sm-2 offset-md-0 offset-lg-0 offset-0 offset-xl-0 col-sm-8 p00 col-12">
