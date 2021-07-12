@@ -10832,7 +10832,7 @@ background: transparent;
 .step-1 .p_5_1 .confirm_button {
   padding-top: 30px;
 }
-.step-1 .p_5_1 .confirm_button button {
+.step-1 .p_5_1 .confirm_button .btn {
   width: 45.7%;
   float: left;
 }
