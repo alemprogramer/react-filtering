@@ -10,7 +10,7 @@ function Step01() {
     const [servicePrice, setServicePrice] = useState(0);
     const [photoPrice, setPhotoPrice] = useState(0);
     // eslint-disable-next-line
-    const [photos, setPhotos] = useState(0);
+    const [photos, setPhotos] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
     const [PageLoading, isPageLoading] = useState(false);
     const [summeryLoading, isSummeryLoading] = useState(false)
@@ -21,6 +21,12 @@ function Step01() {
     const push=()=>{
         console.log('Next Clicked');
     }
+
+    const imageData=(d)=>{
+        const images=[...d];
+        // setPhotos();
+        console.log([images]);
+    };
     
     useEffect(() => {
         isPageLoading(true);
@@ -34,10 +40,10 @@ function Step01() {
     useEffect(() => {
         isSummeryLoading(true);
         // setPhotos();
-        setTotalPrice(Math.abs(servicePrice + (photoPrice * photos) ));
+        setTotalPrice(Math.abs(servicePrice + (photoPrice * photos.length) ));
         isSummeryLoading(false);
         // eslint-disable-next-line
-    }, [photos, totalPrice, servicePrice]);    
+    }, [photos, totalPrice, servicePrice]);
 
     return (
         <section className="step-1">
@@ -67,7 +73,7 @@ function Step01() {
                     <div className="documents">
                         <div className="row">
                             <div className="col-md-8 col-sm-12 col-12">
-                                    <Previews count={(m)=>setPhotos(m)}/>
+                                    <Previews datas={imageData}/>
                                </div>
                                 {summeryLoading === false ? <div
                                 className="col-md-4 offset-sm-2 offset-md-0 offset-lg-0 offset-0 offset-xl-0 col-sm-8 p00 col-12">

@@ -87,7 +87,7 @@ const btns={
 
 // CSS End
 
-function Previews({count}) {
+function Previews({ datas }) {
     const [files, setFiles] = useState([]);
     const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone({
         accept: 'image/*',
@@ -108,7 +108,10 @@ function Previews({count}) {
         isDragReject,
         isDragAccept
     ]);
-
+    
+    // State-Lifting
+    datas(files);
+    
     // Thumbnails
     const thumbs = files.map((f) => (
         <div className="col-md-6 col-sm-12 col-12"  key={f.name}>
@@ -126,12 +129,11 @@ function Previews({count}) {
             </div>
         </div>
     ));
-
+    
     useEffect(() => () => {
         // Make sure to revoke the data uris to avoid memory leaks
         files.forEach(file => URL.revokeObjectURL(file.preview));
     }, [files]);
-    count(files.length)
 
     return (
         <section className='d-none d-sm-none d-md-block d-lg-block d-xl-block'>
