@@ -11,9 +11,7 @@ function Step01() {
     const [photoPrice, setPhotoPrice] = useState(0);
     // eslint-disable-next-line
     const [photos, setPhotos] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
     const [PageLoading, isPageLoading] = useState(false);
-    const [summeryLoading, isSummeryLoading] = useState(false)
     
     let {slug}=useParams();
     let product = Data.find(d => d.slug === slug);
@@ -32,13 +30,6 @@ function Step01() {
         }, 1000);
         // eslint-disable-next-line
     }, []);
-    useEffect(() => {
-        isSummeryLoading(true);
-        // setPhotos();
-        setTotalPrice(Math.abs(servicePrice + (photoPrice * photos.length) ));
-        isSummeryLoading(false);
-        // eslint-disable-next-line
-    }, [photos, totalPrice, servicePrice]);
 
     return (
         <section className="step-1">
@@ -69,8 +60,8 @@ function Step01() {
                         <div className="row">
                             <div className="col-md-8 col-sm-12 col-12">
                               
-                               </div>
-                                {summeryLoading === false ? <Summery/> : 'Loading....'}
+                            </div>
+                                <Summery servicePrice={servicePrice} totalPic={photos.length} photoRate={photoPrice} url={`/${product.slug}/step-02`} />
                             
                         </div>
                     </div>

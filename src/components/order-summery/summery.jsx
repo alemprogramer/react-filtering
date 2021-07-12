@@ -2,16 +2,20 @@ import React, { useState, useReducer } from 'react';
 import { Link } from "react-router-dom";
 
 function Summery({ servicePrice, totalPic, photoRate, url,addOns }) {
+    const [summeryLoading, isSummeryLoading] = useState(false);
     const [total, setTotal]=useState(0);
     useReducer(() => {
+        isSummeryLoading(true);
         setTotal(Math.abs(servicePrice + (photoRate * totalPic)));
+        isSummeryLoading(false);
     }, [total]);
     const push=()=>{
         console.log('Push data to parents');
     }
     return (
-        <div
-            className="col-md-4 offset-sm-2 offset-md-0 offset-lg-0 offset-0 offset-xl-0 col-sm-8 p00 col-12">
+        
+        <div className="col-md-4 offset-sm-2 offset-md-0 offset-lg-0 offset-0 offset-xl-0 col-sm-8 p00 col-12">
+        { summeryLoading === false ? <>
             <div className="summery_box">
                 <div className="row">
                     <div className="col-md-12 col-sm-12 col-12">
@@ -92,11 +96,12 @@ function Summery({ servicePrice, totalPic, photoRate, url,addOns }) {
                 </button>
                 {/* {photos===0 ? <button className="btn cross next float-left">
                                         Next
-                                        </button> :  */}<Link to={`/${url}/step-02`} className="btn cancel float-left" onClick={push}>
+                                        </button> :  */}<Link to={url} className="btn cancel float-left" onClick={push}>
                     Next
                 </Link>{/* } */}
 
             </div>
+  </>  : '...loading' }
         </div>
     )
 }
