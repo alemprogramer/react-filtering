@@ -10629,6 +10629,7 @@ background: transparent;
   background: #ffffff;
 }
 .step-1 .p_5_1 .documents .file_upload .documents .files .img_part {
+  background: #f1f1f1;
   height: 80px;
   width: 140px;
   float: left;
@@ -10665,6 +10666,10 @@ background: transparent;
   right: 10px;
   top: 0;
   color: #999BA2;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 0;
 }
 .step-1 .p_5_1 .documents .file_upload .documents .files .cancel_btn i {
   font-size: 9px;
@@ -10699,7 +10704,7 @@ background: transparent;
   border: 1px dashed #DFE3EB;
   background: transparent;
   height: 80px;
-  padding: 0;
+  padding: 35px;
 }
 .step-1 .p_5_1 .documents .file_upload .documents .add .add_img,
 .step-1 .p_5_1 .documents .file_upload .documents .add .add_text {

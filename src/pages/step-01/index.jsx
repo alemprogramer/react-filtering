@@ -17,6 +17,9 @@ function Step01() {
     
     let {slug}=useParams();
     let product = Data.find(d => d.slug === slug);
+    const photoCount=(m)=>{
+        setPhotos(m);
+    }
 
     useEffect(() => {
         isPageLoading(true);
@@ -31,16 +34,9 @@ function Step01() {
         isSummeryLoading(true);
         // setPhotos();
         setTotalPrice(Math.abs(servicePrice + (photoPrice * photos) ));
-        setTimeout(() => {
-            console.log(totalPrice);
-            isSummeryLoading(false);
-        }, 1300);
-        
+        isSummeryLoading(false);
         // eslint-disable-next-line
-    }, [photos, totalPrice, servicePrice]);
-
-    // Dropzone
-    
+    }, [photos, totalPrice, servicePrice]);    
 
     return (
         <section className="step-1">
@@ -70,7 +66,7 @@ function Step01() {
                     <div className="documents">
                         <div className="row">
                             <div className="col-md-8 col-sm-12 col-12">
-                                    <Previews/>
+                                    <Previews count={photoCount}/>
                                </div>
                                 {summeryLoading === false ? <div
                                 className="col-md-4 offset-sm-2 offset-md-0 offset-lg-0 offset-0 offset-xl-0 col-sm-8 p00 col-12">
