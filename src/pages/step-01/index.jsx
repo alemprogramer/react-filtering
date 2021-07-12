@@ -17,10 +17,11 @@ function Step01() {
     
     let {slug}=useParams();
     let product = Data.find(d => d.slug === slug);
-    const photoCount=(m)=>{
-        setPhotos(m);
-    }
 
+    const push=()=>{
+        console.log('Next Clicked');
+    }
+    
     useEffect(() => {
         isPageLoading(true);
         setServicePrice(product.serviceCost);
@@ -66,7 +67,7 @@ function Step01() {
                     <div className="documents">
                         <div className="row">
                             <div className="col-md-8 col-sm-12 col-12">
-                                    <Previews count={photoCount}/>
+                                    <Previews count={(m)=>setPhotos(m)}/>
                                </div>
                                 {summeryLoading === false ? <div
                                 className="col-md-4 offset-sm-2 offset-md-0 offset-lg-0 offset-0 offset-xl-0 col-sm-8 p00 col-12">
@@ -123,9 +124,12 @@ function Step01() {
                                     <button className="btn cancel float-left">
                                         Cancel
                                     </button>
-                                    <button className="btn next float-left">
+                                    {photos===0 ? <button className="btn cross next float-left">
                                         Next
-                                    </button>
+                                        </button> : <button className="btn next float-left" onClick={push}>
+                                            Next
+                                        </button>}
+                                    
                                 </div>
                                 </div> : 'Loading....'}
                             

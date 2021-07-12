@@ -87,7 +87,7 @@ const btns={
 
 // CSS End
 
-function Previews(props) {
+function Previews({count}) {
     const [files, setFiles] = useState([]);
     const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone({
         accept: 'image/*',
@@ -97,7 +97,6 @@ function Previews(props) {
             })))
         }
     });
-
     const styles = useMemo(() => ({
         // ...baseStyle,
         ...file_box,
@@ -132,8 +131,7 @@ function Previews(props) {
         // Make sure to revoke the data uris to avoid memory leaks
         files.forEach(file => URL.revokeObjectURL(file.preview));
     }, [files]);
-
-    props.count(files.length)
+    count(files.length)
 
     return (
         <section className='d-none d-sm-none d-md-block d-lg-block d-xl-block'>

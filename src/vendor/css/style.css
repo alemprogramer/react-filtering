@@ -10705,6 +10705,7 @@ background: transparent;
   background: transparent;
   height: 80px;
   padding: 35px;
+  cursor: pointer;
 }
 .step-1 .p_5_1 .documents .file_upload .documents .add .add_img,
 .step-1 .p_5_1 .documents .file_upload .documents .add .add_text {
