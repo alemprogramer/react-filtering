@@ -1,17 +1,18 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
-function Summery({ servicePrice, totalPic, photoRate, url,addOns }) {
+function Summery({ servicePrice, totalPic, photoRate, url, addOns, calc }) {
     const [summeryLoading, isSummeryLoading] = useState(false);
     const [total, setTotal]=useState(0);
-    useReducer(() => {
+    useEffect(() => {
         isSummeryLoading(true);
-        setTotal(Math.abs(servicePrice + (photoRate * totalPic)));
+        addOns ?
+        setTotal(Math.floor(servicePrice + (photoRate * totalPic) + addOns)):
+        setTotal(Math.floor(servicePrice + (photoRate * totalPic)));
+
         isSummeryLoading(false);
-    }, [total]);
-    const push=()=>{
-        console.log('Push data to parents');
-    }
+    }, [servicePrice, photoRate, totalPic, addOns, total]);
+
     return (
         
         <div className="col-md-4 offset-sm-2 offset-md-0 offset-lg-0 offset-0 offset-xl-0 col-sm-8 p00 col-12">
@@ -96,7 +97,7 @@ function Summery({ servicePrice, totalPic, photoRate, url,addOns }) {
                 </button>
                 {/* {photos===0 ? <button className="btn cross next float-left">
                                         Next
-                                        </button> :  */}<Link to={url} className="btn cancel float-left" onClick={push}>
+                                        </button> :  */}<Link to={url} className="btn cancel float-left" onClick={()=>calc(total)}>
                     Next
                 </Link>{/* } */}
 

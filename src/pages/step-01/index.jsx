@@ -7,7 +7,7 @@ import Summery from "../../components/order-summery/summery";
 
 function Step01() {
 
-    const [servicePrice, setServicePrice] = useState(0);
+    const [services, setServices] = useState(0);
     const [photoPrice, setPhotoPrice] = useState(0);
     // eslint-disable-next-line
     const [photos, setPhotos] = useState([]);
@@ -20,10 +20,15 @@ function Step01() {
         const images=[...d];
         console.log([images]);
     }; */
+
+
+    const push = (d) => {
+        console.log(d);
+    };
     
     useEffect(() => {
         isPageLoading(true);
-        setServicePrice(product.serviceCost);
+        setServices(product.serviceCost);
         setPhotoPrice(product.imagePrice);
         setTimeout(() => {
             isPageLoading(false)
@@ -61,7 +66,7 @@ function Step01() {
                             <div className="col-md-8 col-sm-12 col-12">
                               
                             </div>
-                                <Summery servicePrice={servicePrice} totalPic={photos.length} photoRate={photoPrice} url={`/${product.slug}/step-02`} />
+                                <Summery servicePrice={services} totalPic={photos.length} photoRate={photoPrice} url={`/${product.slug}/step-02`} calc={push} />
                             
                         </div>
                     </div>
