@@ -1,6 +1,22 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react';
+import { useParams } from "react-router-dom";
+import { withRouter } from "react-router";
+import Data from "../product/data";
+import Design from "./design";
+import Summery from '../../components/order-summery/summery';
 
-function Step02() {
+function Step02({ cPhoto,pTotal }) {
+    const {slug}=useParams();
+    const product= Data.find(d=>d.slug===slug);
+    const service = product.serviceCost;
+    const rate = product.imagePrice;
+    const link = product.slug;
+    const photoCount=cPhoto.length;
+    const price=pTotal;
+    const [design, setDesign] = useState(0);
+
+    useEffect(() => {
+    }, [design])
     return (
         <section className="Purchase-Step-2">
             <section className="p_5_1">
@@ -27,113 +43,25 @@ function Step02() {
                     <div className="documents">
                         <div className="row">
                             <div className="col-md-8 col-sm-12 col-12">
-                                <form action="#">
-                                    <div className="row">
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="vibe">
-                                                <input type="radio" id="test1" name="radio-group"/>
-                                                <label htmlFor="test1">
-                                                    <span className="img_part">
-                                                        <img src="images/vibe.jpg" className="img-fluid" alt="vibe.jpg"/>
-                                                    </span>
-                                                    <span className="vibe_info">
-                                                        <h6>Modern and minimal (contemorary, hi tech)</h6>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="vibe">
-                                                <input type="radio" id="test2" name="radio-group"/>
-                                                <label htmlFor="test2">
-                                                    <span className="img_part">
-                                                        <img src="images/vibe.jpg" className="img-fluid" alt="vibe.jpg"/>
-                                                    </span>
-                                                    <span className="vibe_info">
-                                                        <h6>Modern and minimal (contemorary, hi tech)</h6>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="vibe">
-                                                <input type="radio" id="test3" name="radio-group"/>
-                                                <label htmlFor="test3">
-                                                    <span className="img_part">
-                                                        <img src="images/vibe.jpg" className="img-fluid" alt="vibe.jpg"/>
-                                                    </span>
-                                                    <span className="vibe_info">
-                                                        <h6>Modern and minimal (contemorary, hi tech)</h6>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6 col-sm-6">
-                                            <div className="vibe">
-                                                <input type="radio" id="test4" name="radio-group"/>
-                                                <label htmlFor="test4">
-                                                    <span className="img_part">
-                                                        <img src="images/vibe.jpg" className="img-fluid" alt="vibe.jpg"/>
-                                                    </span>
-                                                    <span className="vibe_info">
-                                                        <h6>Modern and minimal (contemorary, hi tech)</h6>
-                                                    </span>
-                                                </label>
-                                            </div>
+                                <div className="row">
+                                    {Design.map(k=>
+                                    <div className="col-md-6 col-sm-6" key={k.id}>
+                                        <div className="vibe">
+                                                <input type="radio" value={k.price} checked={design === k.price ? true : false} id={`test${k.id}`} onChange={()=>setDesign(k.price)} name="radio-group"/>
+                                            <label htmlFor={`test${k.id}`}>
+                                                <span className="img_part">
+                                                    <img src={k.img} className="img-fluid" alt="vibe.jpg"/>
+                                                </span>
+                                                <span className="vibe_info">
+                                                    <h6>{k.title}</h6>
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
-                            <div
-                                className="col-md-4 offset-sm-2 offset-md-0 offset-lg-0 offset-0 offset-xl-0 col-sm-8 p00 col-12">
-                                <div className="summery_box">
-                                    <div className="row">
-                                        <div className="col-md-12 col-sm-12 col-12">
-                                            <div className="summery_title bottom_line">
-                                                <h5>Order summary</h5>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-12 col-sm-12 col-12">
-                                            <div className="summery_set">
-                                                <div className="name">
-                                                    <h5>Photos</h5>
-                                                </div>
-                                                <div className="price">
-                                                    <h5>4</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-12 col-sm-12 col-12">
-                                            <div className="summery_set bottom_line">
-                                                <div className="name">
-                                                    <h5>Amount</h5>
-                                                </div>
-                                                <div className="price">
-                                                    <h5>₹ 2000.00 x 3</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-12 col-sm-12 col-12">
-                                            <div className="total_set">
-                                                <div className="name">
-                                                    <h5>Total Amount</h5>
-                                                </div>
-                                                <div className="price">
-                                                    <h5>₹ 8000.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="confirm_button">
-                                    <button className="btn cancel float-left">
-                                        Cancel
-                                    </button>
-                                    <button className="btn next float-left">
-                                        Next
-                                    </button>
+                                    )}
                                 </div>
                             </div>
+                            <Summery servicePrice={service} totalPic={photoCount} photoRate={rate} url={`/${link}/step-03` } totals={price} addOns={design}/>
                         </div>
                     </div>
                 </div>
@@ -143,4 +71,4 @@ function Step02() {
     )
 }
 
-export default Step02
+export default withRouter(Step02)

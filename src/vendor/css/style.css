@@ -11149,11 +11149,11 @@ background: transparent;
 .Purchase-Step-2 .p_5_1 .confirm_button {
   padding-top: 30px;
 }
-.Purchase-Step-2 .p_5_1 .confirm_button button {
+.Purchase-Step-2 .p_5_1 .confirm_button .btn {
   width: 45.7%;
   float: left;
 }
-.Purchase-Step-2 .p_5_1 .confirm_button button:hover {
+.Purchase-Step-2 .p_5_1 .confirm_button .btn:hover {
   color: #ffffff;
 }
 .Purchase-Step-2 .p_5_1 .confirm_button .cancel {
@@ -25989,7 +25989,7 @@ background: transparent;
     padding: 6px 0;
     width: 53%;
   }
-  .Purchase-Step-2 .p_5_1 .confirm_button button {
+  .Purchase-Step-2 .p_5_1 .confirm_button .btn {
     width: 44.7%;
     float: left;
     padding: 12px;
