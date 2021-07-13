@@ -5,12 +5,13 @@ import Data from "../product/data";
 import Summery from "../../components/order-summery/summery";
 
 
-function Step01() {
+function Step01({parentData}) {
 
     const [services, setServices] = useState(0);
     const [photoPrice, setPhotoPrice] = useState(0);
     // eslint-disable-next-line
     const [photos, setPhotos] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0);
     const [PageLoading, isPageLoading] = useState(false);
     
     let {slug}=useParams();
@@ -21,19 +22,19 @@ function Step01() {
         console.log([images]);
     }; */
 
-
     const push = (d) => {
-        console.log(d);
+        setTotalPrice(d);
     };
+
     
     useEffect(() => {
         isPageLoading(true);
         setServices(product.serviceCost);
         setPhotoPrice(product.imagePrice);
         setTimeout(() => {
+            parentData(product,photos,totalPrice)
             isPageLoading(false)
         }, 1000);
-        // eslint-disable-next-line
     }, []);
 
     return (

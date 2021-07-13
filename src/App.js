@@ -12,11 +12,15 @@ import Step02 from "./pages/step-02/index";
 
 
 function App() {
+    const allData= (p, u, t)=>{
+        // p = Products, u= Uploaded Photos, t= total Price
+        console.log(p, u, t);
+    }
     return (
         <Switch>
             <Route path='/' exact component={Commerce}/>
-            <Route path='/:slug/step-01' exact component={Step01}/>
-            <Route path='/:slug/step-02' exact component={Step02}/>
+            <Route path='/:slug/step-01' exact><Step01 parentData={allData} /> </Route>
+            <Route path='/:slug/step-02' exact><Step02/></Route>
         </Switch>
     )
 }
