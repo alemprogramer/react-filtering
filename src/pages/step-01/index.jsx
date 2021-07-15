@@ -16,16 +16,16 @@ function Step01({parentData}) {
     
     let {slug}=useParams();
     let product = Data.find(d => d.slug === slug);
-
+    
     /* const imageData=(d)=>{
         const images=[...d];
         console.log([images]);
     }; */
-
+    
     const push = (d) => {
         setTotalPrice(d);
     };
-
+    
     
     useEffect(() => {
         isPageLoading(true);
@@ -35,6 +35,7 @@ function Step01({parentData}) {
             parentData(product,photos,totalPrice)
             isPageLoading(false)
         }, 1000);
+        // eslint-disable-next-line
     }, []);
 
     return (

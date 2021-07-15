@@ -5,14 +5,16 @@ import Data from "../product/data";
 import Design from "./design";
 import Summery from '../../components/order-summery/summery';
 
-function Step02({ cPhoto,pTotal }) {
+function Step02({ cPhoto }) {
     const {slug}=useParams();
     const product= Data.find(d=>d.slug===slug);
     const service = product.serviceCost;
     const rate = product.imagePrice;
     const link = product.slug;
     const photoCount=cPhoto.length;
-    const price=pTotal;
+    const price=(d)=>{
+
+    };
     const [design, setDesign] = useState(0);
 
     useEffect(() => {
@@ -61,7 +63,7 @@ function Step02({ cPhoto,pTotal }) {
                                     )}
                                 </div>
                             </div>
-                            <Summery servicePrice={service} totalPic={photoCount} photoRate={rate} url={`/${link}/step-03` } totals={price} addOns={design}/>
+                            <Summery servicePrice={service} totalPic={photoCount} photoRate={rate} url={`/${link}/step-03` } calc={price}/>
                         </div>
                     </div>
                 </div>

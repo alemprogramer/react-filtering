@@ -33,7 +33,7 @@ function step03() {
                                             <div className="row">
                                                 <div className="col-md-4 col-sm-4 col-12">
                                                     <div className="img_prev position-relative">
-                                                        <img src="images/price-mini-image.png" alt className="img-fluid"/>
+                                                        <img src="images/price-mini-image.png" alt="" className="img-fluid"/>
                                                         <span>
                                                             <p>Photo_1.jpg</p>
                                                         </span>
@@ -137,7 +137,7 @@ function step03() {
                                                                     <div className="refer_btn nav-item dropdown">
                                                                         <a
                                                                             className="nav-link rbtn dropdown-toggle"
-                                                                            href="#"
+                                                                            href="dj"
                                                                             id="navbarDropdown"
                                                                             role="button"
                                                                             data-toggle="dropdown"
@@ -147,9 +147,9 @@ function step03() {
                                                                             Choose
                                                                         </a>
                                                                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                                            <a className="dropdown-item" href="#">Add from your device</a>
+                                                                            <a className="dropdown-item" href="dj">Add from your device</a>
                                                                             <div className="dropdown-divider"/>
-                                                                            <a className="dropdown-item" href="#">Select from our list</a>
+                                                                            <a className="dropdown-item" href="dj">Select from our list</a>
                                                                         </div>
                                                                     </div>
                                                                     <p className=" d-block d-sm-block d-md-none d-lg-none d-xl-none">You can add upto 3 references</p>
@@ -188,7 +188,7 @@ function step03() {
                                             <div className="row">
                                                 <div className="col-md-4 col-sm-4">
                                                     <div className="img_prev position-relative">
-                                                        <img src="images/price-mini-image.png" alt className="img-fluid"/>
+                                                        <img src="images/price-mini-image.png" alt="" className="img-fluid"/>
                                                         <span>
                                                             <p>Photo_1.jpg</p>
                                                         </span>
@@ -292,7 +292,7 @@ function step03() {
                                                                     <div className="refer_btn nav-item dropdown">
                                                                         <a
                                                                             className="nav-link rbtn dropdown-toggle"
-                                                                            href="#"
+                                                                            href="dj"
                                                                             id="navbarDropdown"
                                                                             role="button"
                                                                             data-toggle="dropdown"
@@ -302,9 +302,9 @@ function step03() {
                                                                             Choose
                                                                         </a>
                                                                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                                            <a className="dropdown-item" href="#">Add from your device</a>
+                                                                            <a className="dropdown-item" href="dj">Add from your device</a>
                                                                             <div className="dropdown-divider"/>
-                                                                            <a className="dropdown-item" href="#">Select from our list</a>
+                                                                            <a className="dropdown-item" href="dj">Select from our list</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -342,7 +342,7 @@ function step03() {
                                             <div className="row">
                                                 <div className="col-md-4 col-sm-4">
                                                     <div className="img_prev position-relative">
-                                                        <img src="images/price-mini-image.png" alt className="img-fluid"/>
+                                                        <img src="images/price-mini-image.png" alt="" className="img-fluid"/>
                                                         <span>
                                                             <p>Photo_1.jpg</p>
                                                         </span>
@@ -446,7 +446,7 @@ function step03() {
                                                                     <div className="refer_btn nav-item dropdown">
                                                                         <a
                                                                             className="nav-link rbtn dropdown-toggle"
-                                                                            href="#"
+                                                                            href="dj"
                                                                             id="navbarDropdown"
                                                                             role="button"
                                                                             data-toggle="dropdown"
@@ -456,9 +456,9 @@ function step03() {
                                                                             Choose
                                                                         </a>
                                                                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                                            <a className="dropdown-item" href="#">Add from your device</a>
+                                                                            <a className="dropdown-item" href="dj">Add from your device</a>
                                                                             <div className="dropdown-divider"/>
-                                                                            <a className="dropdown-item" href="#">Select from our list</a>
+                                                                            <a className="dropdown-item" href="dj">Select from our list</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
