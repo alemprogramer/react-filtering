@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { withRouter } from "react-router";
 import Data from "../product/data";
 import Summery from "../../components/order-summery/summery";
+import dragNdrop from "../../components/drag-n-drop/dragNdrop";
 
 
 function Step01({parentData}) {
@@ -31,10 +32,8 @@ function Step01({parentData}) {
         isPageLoading(true);
         setServices(product.serviceCost);
         setPhotoPrice(product.imagePrice);
-        setTimeout(() => {
-            parentData(product,photos,totalPrice)
-            isPageLoading(false)
-        }, 1000);
+        parentData(product,photos,totalPrice)
+        isPageLoading(false)
         // eslint-disable-next-line
     }, []);
 
@@ -66,7 +65,7 @@ function Step01({parentData}) {
                     <div className="documents">
                         <div className="row">
                             <div className="col-md-8 col-sm-12 col-12">
-                              
+                              {/* Drag N Drop Here */}
                             </div>
                                 <Summery servicePrice={services} totalPic={photos.length} photoRate={photoPrice} url={`/${product.slug}/step-02`} calc={push} />
                             
