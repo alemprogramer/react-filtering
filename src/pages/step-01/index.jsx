@@ -25,7 +25,7 @@ function Step01({parentData}) {
     const push = (d) => {
         setTotalPrice(d);
     };
-
+    
     
     useEffect(() => {
         isPageLoading(true);
@@ -35,6 +35,7 @@ function Step01({parentData}) {
             parentData(product,photos,totalPrice)
             isPageLoading(false)
         }, 1000);
+        // eslint-disable-next-line
     }, []);
 
     return (

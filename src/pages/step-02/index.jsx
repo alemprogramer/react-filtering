@@ -17,6 +17,7 @@ function Step02({ cPhoto,pTotal }) {
 
     useEffect(() => {
     }, [design])
+    const total=()=>{}
     return (
         <section className="Purchase-Step-2">
             <section className="p_5_1">
@@ -61,7 +62,7 @@ function Step02({ cPhoto,pTotal }) {
                                     )}
                                 </div>
                             </div>
-                            <Summery servicePrice={service} totalPic={photoCount} photoRate={rate} url={`/${link}/step-03` } totals={price} addOns={design}/>
+                            <Summery servicePrice={service} totalPic={photoCount} photoRate={rate} url={`/${link}/step-03` } totals={price} addOns={design} calc={total}/>
                         </div>
                     </div>
                 </div>
