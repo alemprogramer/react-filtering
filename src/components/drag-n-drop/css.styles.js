@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FileUploadContainer = styled.section`
+const FileUploadContainer = styled.section`
   position: relative;
   margin: 25px 0 15px;
   border: 2px dotted lightgray;
@@ -12,7 +12,7 @@ export const FileUploadContainer = styled.section`
   background-color: white;
 `;
 
-export const FormField = styled.input`
+const FormField = styled.input`
   font-size: 18px;
   display: block;
   width: 100%;
@@ -30,7 +30,7 @@ export const FormField = styled.input`
   }
 `;
 
-export const InputLabel = styled.label`
+const InputLabel = styled.label`
   top: -21px;
   font-size: 13px;
   color: black;
@@ -38,14 +38,14 @@ export const InputLabel = styled.label`
   position: absolute;
 `;
 
-export const DragDropText = styled.p`
+const DragDropText = styled.p`
   font-weight: bold;
   letter-spacing: 2.2px;
   margin-top: 0;
   text-align: center;
 `;
 
-export const UploadFileBtn = styled.button`
+const UploadFileBtn = styled.button`
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
@@ -129,7 +129,7 @@ export const UploadFileBtn = styled.button`
   }
 `;
 
-export const FilePreviewContainer = styled.article`
+const FilePreviewContainer = styled.article`
   margin-bottom: 35px;
 
   span {
@@ -137,7 +137,7 @@ export const FilePreviewContainer = styled.article`
   }
 `;
 
-export const PreviewList = styled.section`
+const PreviewList = styled.section`
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
@@ -147,7 +147,7 @@ export const PreviewList = styled.section`
   }
 `;
 
-export const FileMetaData = styled.div`
+const FileMetaData = styled.div`
   display: ${(props) => (props.isImageFile ? "none" : "flex")};
   flex-direction: column;
   position: absolute;
@@ -168,7 +168,7 @@ export const FileMetaData = styled.div`
   }
 `;
 
-export const RemoveFileIcon = styled.i`
+const RemoveFileIcon = styled.i`
   cursor: pointer;
 
   &:hover {
@@ -176,7 +176,7 @@ export const RemoveFileIcon = styled.i`
   }
 `;
 
-export const PreviewContainer = styled.section`
+const PreviewContainer = styled.section`
   padding: 0.25rem;
   width: 20%;
   height: 120px;
@@ -210,8 +210,10 @@ export const PreviewContainer = styled.section`
   }
 `;
 
-export const ImagePreview = styled.img`
+const ImagePreview = styled.img`
   border-radius: 6px;
   width: 100%;
   height: 100%;
 `;
+
+export { FileUploadContainer,FormField,InputLabel,DragDropText,UploadFileBtn,FilePreviewContainer,PreviewList,FileMetaData,RemoveFileIcon,PreviewContainer,ImagePreview,}
