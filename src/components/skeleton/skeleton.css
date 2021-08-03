@@ -20,3 +20,14 @@
     width: 100%;
     height: 100%;
 }
+
+.logo-wraapper {
+    width: 90px;
+    height: 20px;
+}
+
+.NavItem{
+    width: 55.6px;
+    height: 21px;
+    margin: 0 11px;
+}

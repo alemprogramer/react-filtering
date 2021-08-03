@@ -1,5 +1,5 @@
 import React from 'react'
-import "./main.css"
+import "./skeleton.css"
 
 const SkeletonMain = ({varient}) => {
     const baseClass=`effect ${varient}`;
@@ -8,6 +8,10 @@ const SkeletonMain = ({varient}) => {
     )
 }
 
-export default SkeletonMain
+const Shade=()=>{
+    
+}
 
+export default SkeletonMain
+export {Shade}
 

@@ -1,6 +1,7 @@
 import React, {Suspense, lazy, useState, useEffect} from 'react'
 
 import {Link} from "react-router-dom";
+import { Logo, NavItem } from './skeleton';
 const MegaMenu = lazy(() => import ("./MegaMenu"));
 
 const LargeNavbar = () => {
@@ -8,70 +9,70 @@ const LargeNavbar = () => {
     const dataList = [
         {
             mainTitle: 'Virtual Staging',
-            datas: {
-                a: {
+            datas: [
+                 {
                     title: 'Virtual home staging01',
                     url: '/service',
                     img: imgs,
                     details: 'Lorem ipsum dolor sit amet adipiscing elit. Sed a.'
                 },
-                b: {
+                 {
                     title: 'Virtual home staging02',
                     url: '/service',
                     img: imgs,
                     details: 'Lorem ipsum dolor sit amet, consectetu elit. Sed a.'
                 },
-                c: {
+                 {
                     title: 'Virtual home staging03',
                     url: '/service',
                     img: imgs,
                     details: 'Lorem ipsum dolor sit amet, consectetu adipiscing . Sed a.'
                 }
-            }
+    ]
         }, {
             mainTitle: '3d Modelling',
-            datas: {
-                a: {
+            datas: [{
+                 
                     title: 'Virtual home staging04',
                     url: '/service',
                     img: imgs,
                     details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit.  a.'
                 },
-                b: {
+                {
                     title: 'Virtual home staging05',
                     url: '/service',
                     img: imgs,
                     details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed .'
                 },
-                c: {
+                 {
                     title: 'Virtual home staging06',
                     url: '/service',
                     img: imgs,
                     details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed .'
                 }
-            }
+            ]
         }, {
             mainTitle: 'Interior Design',
-            datas: {
-                a: {
+            datas: [
+                 {
                     title: 'Virtual home staging07',
                     url: '/service',
                     img: imgs,
                     details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed a.'
                 },
-                b: {
+                 {
                     title: 'Virtual home staging08',
                     url: '/service',
                     img: imgs,
                     details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed a.'
                 },
-                c: {
+                 {
                     title: 'Virtual home staging09',
                     url: '/service',
                     img: imgs,
                     details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed a.'
                 }
-            }
+            ]
         }
     ];
 
@@ -98,15 +99,17 @@ const LargeNavbar = () => {
                             <div className="row">
                                 <div className="col-lg-2 col-xl-2 col-sm-2 col-md-2 d-flex align-items-center">
                                     <div className="logo-area">
-                                    {loading === true ? 'Skeleton Here':<Link to='/'>Virtual Decor</Link>}
+                                    {loading === true ? <Logo/> :<Link to='/'>Virtual Decor</Link>}
                                         
                                     </div>
                                 </div>
                                 <div className="col-lg-10 col-md-10 col-sm-10 col-xl-10 text-right">
                                     <div className="main-menu">
                                         <ul>
-                                        {loading === true ? 'Skeleton Here':<>
-                                        <li>
+                                        {loading === true ? [1, 2, 3, 4, 5, 6].map(d => <li key={d}>
+                                            <NavItem/>
+                                        </li>):<>
+                                            <li>
                                                 <Link to='/service' className="nav-link">Services</Link>
                                                 <div className="mega-menu">
                                                     <Suspense fallback={< p > Please wait ...</p>}>

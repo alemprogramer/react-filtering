@@ -11,18 +11,18 @@ export class MegaMenu extends Component {
                 <h5>{title}</h5>
 
                 <ul>
-                    {Object
-                        .keys(data)
+                    {
+                        data
                         .map(l => <li key={k++/*key value, please make it random and unique*/}>
                             <Link
-                                to={data[l].url}
+                                to={l.url}
                                 className="menu-list-item d-flex align-items-center">
                                 <div className="menu-icon">
-                                    <img src={data[l].img} className="img-fluid" alt=""/>
+                                    <img src={l.img} className="img-fluid" alt=""/>
                                 </div>
                                 <div className="menu-desc">
-                                    <h4>{data[l].title}</h4>
-                                    <p>{data[l].details}</p>
+                                    <h4>{l.title}</h4>
+                                    <p>{l.details}</p>
                                 </div>
                             </Link>
                         </li>)}
