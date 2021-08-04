@@ -1,16 +1,10 @@
 import React from 'react'
 import SkeletonMain from '../skeleton/skeletonMain'
 
-function dummy() {
-    return (
-        <div></div>
-    )
-}
-
 const Logo = () => {
     return (
         <div className="logo-wraapper">
-            <SkeletonMain varient='image'/>
+            <SkeletonMain effects='image'/>
         </div>
     )
 }
@@ -18,10 +12,8 @@ const Logo = () => {
 const NavItem=()=>{
 return(
     <div className="NavItem">
-        <SkeletonMain varient='image' />
+        <SkeletonMain effects='image' />
     </div>
 )
 }
-
-export default dummy
 export { Logo, NavItem}
