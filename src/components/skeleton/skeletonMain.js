@@ -11,7 +11,9 @@ const SkeletonMain = ({effects}) => {
 const Shimmer = () => {
 
     return (
-        <div className="shine"></div>
+        <div className="shimmer-wrapper">
+            <div className="shine"></div>
+        </div>
     )
 }
 

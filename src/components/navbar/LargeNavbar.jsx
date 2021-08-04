@@ -2,80 +2,11 @@ import React, {Suspense, lazy, useState, useEffect} from 'react'
 
 import {Link} from "react-router-dom";
 import { Logo, NavItem } from './skeleton';
+import dataList from "./data";
 const MegaMenu = lazy(() => import ("./MegaMenu"));
 
 const LargeNavbar = () => {
-    const imgs = process.env.PUBLIC_URL + '/vendor/images/serv_icon.png';
-    const dataList = [
-        {
-            mainTitle: 'Virtual Staging',
-            datas: [
-                 {
-                    title: 'Virtual home staging01',
-                    url: '/service',
-                    img: imgs,
-                    details: 'Lorem ipsum dolor sit amet adipiscing elit. Sed a.'
-                },
-                 {
-                    title: 'Virtual home staging02',
-                    url: '/service',
-                    img: imgs,
-                    details: 'Lorem ipsum dolor sit amet, consectetu elit. Sed a.'
-                },
-                 {
-                    title: 'Virtual home staging03',
-                    url: '/service',
-                    img: imgs,
-                    details: 'Lorem ipsum dolor sit amet, consectetu adipiscing . Sed a.'
-                }
-    ]
-        }, {
-            mainTitle: '3d Modelling',
-            datas: [{
-                 
-                    title: 'Virtual home staging04',
-                    url: '/service',
-                    img: imgs,
-                    details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit.  a.'
-                },
-                {
-                    title: 'Virtual home staging05',
-                    url: '/service',
-                    img: imgs,
-                    details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed .'
-                },
-                 {
-                    title: 'Virtual home staging06',
-                    url: '/service',
-                    img: imgs,
-                    details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed .'
-                }
-            ]
-        }, {
-            mainTitle: 'Interior Design',
-            datas: [
-                 {
-                    title: 'Virtual home staging07',
-                    url: '/service',
-                    img: imgs,
-                    details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed a.'
-                },
-                 {
-                    title: 'Virtual home staging08',
-                    url: '/service',
-                    img: imgs,
-                    details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed a.'
-                },
-                 {
-                    title: 'Virtual home staging09',
-                    url: '/service',
-                    img: imgs,
-                    details: 'Lorem ipsum dolor sit amet, consectetu adipiscing elit. Sed a.'
-                }
-            ]
-        }
-    ];
-
+    
     const [services,
         setServices] = useState([]);
         const [loading, setLoading] = useState(true)
@@ -84,7 +15,7 @@ const LargeNavbar = () => {
             setTimeout(() => {
                 setServices(dataList);
                 setLoading(false);
-            }, 1500);
+            }, 2000);
             // eslint-disable-next-line
         }, [services])
 
@@ -98,7 +29,7 @@ const LargeNavbar = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-2 col-xl-2 col-sm-2 col-md-2 d-flex align-items-center">
-                                    <div className="logo-area">
+                                <div className="logo-area overflow-hidden">
                                     {loading === true ? <Logo/> :<Link to='/'>Virtual Decor</Link>}
                                         
                                     </div>
@@ -106,7 +37,7 @@ const LargeNavbar = () => {
                                 <div className="col-lg-10 col-md-10 col-sm-10 col-xl-10 text-right">
                                     <div className="main-menu">
                                         <ul>
-                                        {loading === true ? [1, 2, 3, 4, 5, 6].map(d => <li key={d}>
+                                        {loading === true ? [1, 2, 3, 4, 5, 6].map(d => <li className="overflow-hidden" key={d}>
                                             <NavItem/>
                                         </li>):<>
                                             <li>
@@ -150,8 +81,10 @@ const LargeNavbar = () => {
                                     </div>
                                 </div>
                             </div>
+                           
                         </div>
                     </div>
+
                 </div>
             </section>
     )
