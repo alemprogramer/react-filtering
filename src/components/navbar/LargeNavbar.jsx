@@ -22,7 +22,7 @@ const LargeNavbar = () => {
         
     return (
          <section
-                className="page-head d-none d-sm-block d-xl-block d-lg-block d-md-block">
+                className="page-head">
                 <div className="rd-navbar-wrap">
                     <div
                         className="header-bar-area rd-navbar rd-navbar-corporate-light rd-navbar-original rd-navbar-static rd-navbar--is-stuck">

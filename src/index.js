@@ -1,8 +1,6 @@
 import React,{Suspense,lazy} from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import LargeNavbar from "./components/navbar/LargeNavbar";
-import SmallNavbar from "./components/navbar/SmallNavbar";
 
 /* import Animate from 'animate.css-react'; */
 
@@ -14,15 +12,15 @@ import "./vendor/css/menu2.css";
 import "./vendor/css/style.css";
 import reportWebVitals from './reportWebVitals';
 import RouteTop, { ScrollToTop} from './components/scrollToTop';
+import NavBar from './components/navbar/main';
 const Footer = lazy(()=> import('./components/footer/Footer'));
 
 ReactDOM.render(
     <React.StrictMode>
     <Router>
     <RouteTop />
-    <LargeNavbar/>
+    <NavBar/>
     <ScrollToTop/>
-    <SmallNavbar/> 
     <App/>
     <Suspense fallback={<p>Please wait...</p>} >
     <Footer/>
