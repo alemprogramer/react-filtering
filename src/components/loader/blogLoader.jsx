@@ -1,51 +1,41 @@
-import React from 'react'
+import React from 'react';
+import {SkeletonBlog} from "../skeleton/skeletonMain";
+import './blogLoader.css';
 
-const Blogs =({
-            date,
-            slug,
-            text,
-            writer,
-            avatar,
-            title,
-            img
-        })=> {
-        return (
-            <div className="col-md-4 col-sm-4 col-12">
-                <div className="partner_slide">
-                    <div className="partner_img">
-                        <img src={img} alt="partner.jpg" className="img-fluid"/>
+const Blogs = () => {
+    return (
+        <div className="col-md-4 col-sm-4 col-12">
+            <div className="partner_slide">
+                <div className="partner_img">
+                    <SkeletonBlog effects='image'/>
+                </div>
+                <div className="partner_text">
+
+                    <div className="title text-center text-capitalize">
+                        <SkeletonBlog effects='text mt-0'/>
+                        <SkeletonBlog effects='text mb-0'/>
                     </div>
-                    <div className="partner_text">
 
-                        <div className="title text-center text-capitalize">
-                            <h5>
-                                {title}
-                            </h5>
+                    <div className="blogger">
+                        <div className="imgs float-left">
+                            <SkeletonBlog effects='avatar'/>
                         </div>
+                        <SkeletonBlog effects='text name'/>
+                        <SkeletonBlog effects='text date'/>
 
-                        <div className="blogger">
-                            <div className="imgs float-left">
-                                <img src={avatar} alt="blogger.png" className="img-fluid"/>
-                            </div>
-                            <h6>{writer}</h6>
-                            <p>
-                                {new Date(date).toLocaleDateString()}
-                            </p>
-                        </div>
-                        <div className="text_part">
-                            <h6>
-                                {text}
-                            </h6>
-                        </div>
-                        <a href={slug} className="mini_btn d-inline-block text-capitalize text-center">
-                            <h5>view more
-                            </h5>
-                            <i className="fas fa-long-arrow-alt-right"></i>
-                        </a>
                     </div>
+                    <div className="text_part">
+                        <SkeletonBlog effects='text'/>
+                        <SkeletonBlog effects='text'/>
+                        <SkeletonBlog effects='text'/>
+                    </div>
+                    <span className="mini_btn  d-inline-block text-capitalize text-center">
+                        <SkeletonBlog effects='text'/>
+                    </span>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
+}
 
 export default Blogs

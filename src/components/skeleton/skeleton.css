@@ -14,9 +14,10 @@
     height: 12px;
 }
 
-.effect.avater {
-    width: 30px;
-    height: 30px;
+.effect.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .effect.image {
@@ -44,6 +45,13 @@
     background: #f1f1f1;
     overflow: hidden;
     animation: slide 1.5s infinite;
+}
+
+.text .shimmer-wrapper{
+    width: 5%;
+}
+.title .shimmer-wrapper{
+    width: 10%;
 }
 
 @keyframes slide {

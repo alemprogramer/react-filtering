@@ -1,0 +1,27 @@
+.effect.image {
+    height: 223px;
+}
+.blogger .imgs{
+    background: transparent !important;
+    border: none !important;
+}
+
+.partner_slide .name{
+    width: 45%;
+}
+.title .text:nth-child(even) {
+    width: 35%;
+}
+.partner_slide .date{
+    width: 30%;
+}
+.blogger .avatar,
+.mini_btn .text,
+.partner_slide .image,
+.partner_slide .title{
+    margin: 0;
+}
+
+.text_part .text:nth-child(even){
+    width: 80%;
+} 
