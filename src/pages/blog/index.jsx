@@ -4,6 +4,10 @@ import Blogger from "./blog";
 import Pagination from './pagination';
 import Data, {tags} from "./data";
 
+// Skeleton Design
+
+import Blogs from "../../components/loader/blogLoader";
+
 function Blog() {
     const link = process.env.PUBLIC_URL;
     const person = {
@@ -85,8 +89,8 @@ function Blog() {
         // if (v === 'name') {     sorted = blog.sort((a, b) => {         if (a.title <
         // b.title) return -1;         if (a.title > b.title) return 1;         return
         // 0;     });     } else if (v === 'time') {     sorted = blog.sort((a, b) => {
-        //        if (a.date < b.date) return -1;         if (a.date > b.date) return 1;
-        //         return 0;     }); }
+        //       if (a.date < b.date) return -1;         if (a.date > b.date) return 1;
+        //        return 0;     }); }
         v === 'name' && (sorted = blog.sort((a, b) => a.title < b.title
             ? -1
             : 1));
@@ -187,18 +191,22 @@ function Blog() {
                     <div className="container">
                         {loader === false
                             ? <div className="row">
-
-                                    {currentBlogs
-                                        .map(b => <Blogger
-                                            key={b.id}
-                                            date={b.date}
-                                            slug={b.slug}
-                                            text={b.text}
-                                            writer={b.writer}
-                                            avatar={b.avatar}
-                                            title={b.title}
-                                            img={b.img}
-                                            loading={loading}/>)}
+                                <Blogs date={Data[1].date}
+                                    slug={Data[1].slug}
+                                    text={Data[1].text}
+                                    writer={Data[1].writer}
+                                    avatar={Data[1].avatar}
+                                    title={Data[1].title}
+                                    img={Data[1].img}/> {currentBlogs.map(b => <Blogger
+                                        key={b.id}
+                                        date={b.date}
+                                        slug={b.slug}
+                                        text={b.text}
+                                        writer={b.writer}
+                                        avatar={b.avatar}
+                                        title={b.title}
+                                        img={b.img}
+                                        loading={loading}/>)}
                                 </div>
                             : <h2>Loading from main component....</h2>}
 

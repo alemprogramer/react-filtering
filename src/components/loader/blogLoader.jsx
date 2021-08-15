@@ -1,19 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-class Blogger extends Component {
-    render() {
-        const {
+const Blogs =({
             date,
             slug,
             text,
             writer,
             avatar,
             title,
-            img,loading
-        } = this.props;
-        if(loading){
-            return <h2>Loading From Blog Component...</h2>
-        }
+            img
+        })=> {
         return (
             <div className="col-md-4 col-sm-4 col-12">
                 <div className="partner_slide">
@@ -52,6 +47,5 @@ class Blogger extends Component {
             </div>
         )
     }
-}
 
-export default Blogger
+export default Blogs

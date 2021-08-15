@@ -1,0 +1,62 @@
+.effect {
+    background: #ddd;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.effect.title {
+    width: 100%;
+    height: 58px;
+}
+
+.effect.text {
+    width: 100%;
+    height: 12px;
+}
+
+.effect.avater {
+    width: 30px;
+    height: 30px;
+}
+
+.effect.image {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-wrapper {
+    width: 90px;
+    height: 20px;
+}
+
+.NavItem {
+    width: 55.6px;
+    height: 21px;
+}
+
+.shimmer-wrapper{
+    position: absolute;
+    top: 0;
+    left: -25%;
+    width: 30%;
+    height: 100%;
+    transform: skewX(-30deg);
+    background: #f1f1f1;
+    overflow: hidden;
+    animation: slide 1.5s infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: -25%;
+    };
+    40% {
+        left: 40%;
+    }
+    60% {
+        left: 60%;
+    }
+    100%{
+        left: 125%;
+    }
+}
