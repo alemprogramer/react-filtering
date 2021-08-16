@@ -19,7 +19,7 @@ import {
     partner
 } from "../../components/data/data";
 import Loaders from '../../components/contexts';
-import LoadingBanner from "../../components/loader/banner";
+import Desclaim from './desclaimer/Desclaim';
 
 const Banner = lazy(() => import ('./banner/main'))
 
@@ -40,7 +40,7 @@ function Home() {
 
     // Global Loader
 
-    const {loader, updateLoader} = useContext(Loaders);
+    const {updateLoader} = useContext(Loaders);
 
     useEffect(() => {
         setDif(different);
@@ -49,33 +49,31 @@ function Home() {
         setprevWork(previousWork);
         setAgent(agency);
         setPartnership(partner);
-        setTimeout(() => {
             updateLoader(false);
-        }, 2000);
         return () => {
             updateLoader(true);
         };
         // eslint-disable-next-line
     }, []);
 
-    return ( <> {
-        loader === true
-            ? <LoadingBanner/>
-            : <section className="home_page">
-                    <Suspense fallback={< p > Please Wait ...</p>}>
-                        <Banner/>
-                    </Suspense>
-                    <Difference
-                        title='What set us apart from other virtual staging companies'
-                        rare={dif}/>
-                    <PreviousWork data={prevWork}/>
-                    <Services data={serv}/> {/* Incomplete Mobile Part */}
-                    <HowItWork title="How it works ?" work={hiw}/>
-                    <Pricing/>
-                    <Agencies data={agent}/>
-                    <Pertnership data={partnership}/>
-                </section>
-    } </>
+    return ( 
+        <>  
+            <section className="home_page">
+                <Suspense fallback={< p > Please Wait ...</p>}>
+                    <Banner/>
+                </Suspense>
+                <Difference
+                    title='What set us apart from other virtual staging companies'
+                    rare={dif}/>
+                <PreviousWork data={prevWork}/>
+                <Services data={serv}/> {/* Incomplete Mobile Part */}
+                <HowItWork title="How it works ?" work={hiw}/>
+                <Pricing/>
+                <Agencies data={agent}/>
+                <Pertnership data={partnership}/>
+                <Desclaim/>
+            </section>
+        </>
     )
 }
 
