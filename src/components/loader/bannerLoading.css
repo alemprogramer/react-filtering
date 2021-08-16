@@ -1,0 +1,26 @@
+.banner_bg .image{
+    height: 639px;
+    margin: 0;
+}
+
+.banner_content .miniTitle {
+width: 30%;
+}
+.banner_content .title {
+height: 40px;
+width: 90%;
+}
+
+.blogger.loader .text {
+    width: 30%;
+    height: 20px;
+    margin-top: 5px;
+}
+.text_area .text:nth-child(even){
+    width: 40%;
+}
+
+.price_tag .text{
+    width: 20%;
+    height: 30px;
+}
