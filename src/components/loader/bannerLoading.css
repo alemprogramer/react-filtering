@@ -1,3 +1,147 @@
+.banner {
+    height: auto;
+    width: 100%;
+    background: #ffffff;
+}
+
+.banner .container {
+    height: 100%;
+    position: relative;
+}
+
+.banner .container .banner_content {
+    left: -100px;
+    top: 96px;
+    background: #ffffff;
+    padding: 80px 0 0;
+    display: block;
+    padding-bottom: 156px;
+}
+
+.banner .container .banner_content h1 {
+    font-family: 'Muli', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 73px;
+    color: #363840;
+    position: relative;
+    margin-bottom: 60px;
+    width: 463px;
+    height: 146px;
+}
+
+.banner .container .banner_content h1::after {
+    position: absolute;
+    content: "";
+    bottom: -16px;
+    left: 0;
+    width: 32px;
+    height: 4px;
+    background: #f16334;
+}
+
+.banner .container .banner_content .text_area {
+    font-family: 'Muli', sans-serif;
+    color: #7B7D84;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 170%;
+    padding: 16px 0 0;
+    font-size: 16px;
+}
+
+.banner .container .banner_content .price_tag {
+    padding: 32px 0;
+}
+
+.banner .container .banner_content .price_tag h3 {
+    font-family: 'Muli', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #363840;
+    float: left;
+    display: inline-block;
+    color: #f16334;
+    padding-right: 8px;
+}
+
+.banner .container .banner_content .price_tag p {
+    font-family: 'Muli', sans-serif;
+    color: #7B7D84;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 170%;
+    display: inline-block;
+    padding-top: 0.43780px;
+}
+
+.banner .container .banner_content a.place_btn {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font-family: 'Muli', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    color: #7b7d84;
+    color: #f16334 !important;
+    border: 1px solid #f16334;
+    padding: 12px 23px;
+    border-radius: 0;
+    font-weight: 700;
+    -webkit-transition: all linear 0.25s;
+    -moz-transition: all linear 0.25s;
+    -ms-transition: all linear 0.25s;
+    -o-transition: all linear 0.25s;
+    transition: all linear 0.25s;
+    text-transform: capitalize;
+}
+
+.banner .container .banner_content a.place_btn:hover {
+    color: #ffffff !important;
+    background-color: #f16334;
+    border: 1px solid #f16334;
+}
+
+.banner .container .banner_content a.place_btn:focus {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.banner .container .banner_bg {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .container .banner_bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.banner .container .banner_bg {
+    top: 0;
+    right: -37%;
+    width: 134%;
+    height: 100%;
+    position: absolute;
+}
+
+.banner .container .banner_bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
 .banner_bg .image{
     height: 639px;
     margin: 0;
