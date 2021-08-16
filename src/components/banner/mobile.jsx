@@ -4,7 +4,7 @@ export class Mobile extends Component {
     render() {
         const { title, miniTitle, text, price, link, image, linkText, buttonText } = this.props;
         return (
-            <section className="mobile_design d-md-none d-xl-none d-lg-none d-sm-none d-block">
+            <section className="mobile_design">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">

@@ -2,7 +2,7 @@ import React from 'react';
 import {SkeletonBlog} from "../skeleton/skeletonMain";
 import './blogLoader.css';
 
-const Blogs = () => {
+const BlogLoading = () => {
     return (
         <div className="col-md-4 col-sm-4 col-12">
             <div className="partner_slide">
@@ -38,4 +38,4 @@ const Blogs = () => {
     )
 }
 
-export default Blogs
+export default BlogLoading

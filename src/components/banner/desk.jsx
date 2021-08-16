@@ -4,7 +4,7 @@ export class Banner extends Component {
     render() {
         const { blog, title, miniTitle, text, price, link, image, linkText, buttonText}=this.props;
         return (
-            <section className="banner d-none d-sm-block d-xl-block d-lg-block d-md-block">
+            <section className="banner">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-sm-6">

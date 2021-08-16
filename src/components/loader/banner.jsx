@@ -2,9 +2,9 @@ import React from 'react';
 import { SkeletonBlog } from "../skeleton/skeletonMain";
 import "./bannerLoading.css";
 
-export const LoadingBanner = ()=> {
+const LoadingBanner = ()=> {
         return (
-            <section className="banner d-none d-sm-block d-xl-block d-lg-block d-md-block">
+            <section className="banner loaders">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-sm-6">

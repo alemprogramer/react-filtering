@@ -1,15 +1,15 @@
-.banner {
+.banner.loaders {
     height: auto;
     width: 100%;
     background: #ffffff;
 }
 
-.banner .container {
+.banner.loaders .container {
     height: 100%;
     position: relative;
 }
 
-.banner .container .banner_content {
+.banner.loaders .container .banner_content {
     left: -100px;
     top: 96px;
     background: #ffffff;
@@ -18,7 +18,7 @@
     padding-bottom: 156px;
 }
 
-.banner .container .banner_content h1 {
+.banner.loaders .container .banner_content h1 {
     font-family: 'Muli', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -31,7 +31,7 @@
     height: 146px;
 }
 
-.banner .container .banner_content h1::after {
+.banner.loaders .container .banner_content h1::after {
     position: absolute;
     content: "";
     bottom: -16px;
@@ -41,7 +41,7 @@
     background: #f16334;
 }
 
-.banner .container .banner_content .text_area {
+.banner.loaders .container .banner_content .text_area {
     font-family: 'Muli', sans-serif;
     color: #7B7D84;
     font-weight: 400;
@@ -52,11 +52,11 @@
     font-size: 16px;
 }
 
-.banner .container .banner_content .price_tag {
+.banner.loaders .container .banner_content .price_tag {
     padding: 32px 0;
 }
 
-.banner .container .banner_content .price_tag h3 {
+.banner.loaders .container .banner_content .price_tag h3 {
     font-family: 'Muli', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -69,7 +69,7 @@
     padding-right: 8px;
 }
 
-.banner .container .banner_content .price_tag p {
+.banner.loaders .container .banner_content .price_tag p {
     font-family: 'Muli', sans-serif;
     color: #7B7D84;
     font-weight: 400;
@@ -80,7 +80,7 @@
     padding-top: 0.43780px;
 }
 
-.banner .container .banner_content a.place_btn {
+.banner.loaders .container .banner_content a.place_btn {
     padding: 0;
     margin: 0;
     background: transparent;
@@ -103,30 +103,30 @@
     text-transform: capitalize;
 }
 
-.banner .container .banner_content a.place_btn:hover {
+.banner.loaders .container .banner_content a.place_btn:hover {
     color: #ffffff !important;
     background-color: #f16334;
     border: 1px solid #f16334;
 }
 
-.banner .container .banner_content a.place_btn:focus {
+.banner.loaders .container .banner_content a.place_btn:focus {
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
-.banner .container .banner_bg {
+.banner.loaders .container .banner_bg {
     width: 100%;
     height: 100%;
 }
 
-.banner .container .banner_bg img {
+.banner.loaders .container .banner_bg img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.banner .container .banner_bg {
+.banner.loaders .container .banner_bg {
     top: 0;
     right: -37%;
     width: 134%;
@@ -134,25 +134,24 @@
     position: absolute;
 }
 
-.banner .container .banner_bg img {
+.banner.loaders .container .banner_bg img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-
-
-.banner_bg .image{
-    height: 639px;
+.banner_bg .image {
+    height: 580px;
     margin: 0;
 }
 
 .banner_content .miniTitle {
-width: 30%;
+    width: 30%;
 }
+
 .banner_content .title {
-height: 40px;
-width: 90%;
+    height: 40px;
+    width: 90%;
 }
 
 .blogger.loader .text {
@@ -160,11 +159,12 @@ width: 90%;
     height: 20px;
     margin-top: 5px;
 }
-.text_area .text:nth-child(even){
+
+.text_area .text:nth-child(even) {
     width: 40%;
 }
 
-.price_tag .text{
+.price_tag .text {
     width: 20%;
     height: 30px;
 }
